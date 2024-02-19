@@ -1,1 +1,41 @@
-<p>client-home works!</p>
+<main>
+    <nav class="navegador">
+      <div class="usuario">
+        <img src="../../../assets/img/logo.jpg" (click)="opcionesclick()">
+        <div class="opciones">
+          <div *ngIf="opciones">            
+            <button (click)="cerrarsession()">cerrar session</button>
+          </div>
+        </div>
+      </div>      
+      
+    </nav>
+    <section>
+      <div class="contenedor_tabla">
+        <h2>consulta el cronograma de las rutas</h2>
+        <table>
+          <thead>
+            <tr>
+              <td id="#index">Num</td>
+              <td>ID</td>
+              <td>RouteId</td>
+              <td>semana</td>
+              <td>desde</td>
+              <td>hasta</td>
+              <td></td>
+            </tr>
+          </thead>
+          <tbody *ngIf="datos_Schedules.length">
+            <tr *ngFor="let datos of datos_Schedules; let indice = index;">
+              <td id="#index">{{indice+1}}</td>
+              <td>{{datos.ID}}</td>
+              <td>{{datos.RouteId}}</td>
+              <td>{{datos.WeekNum}}</td>
+              <td>{{datos.Fromm}}</td>
+              <td>{{datos.Too}}</td>              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>

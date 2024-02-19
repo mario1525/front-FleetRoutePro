@@ -7,7 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
     providedIn: 'root'
   })
   export class AutenticacionService {
-    private apiUrl = 'https://localhost:7191/'; 
+    private apiUrl = 'https://localhost:7069/'; 
   
     constructor(private http: HttpClient, private cookieService: CookieService) { }
   

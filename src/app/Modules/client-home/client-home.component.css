@@ -1,0 +1,258 @@
+main {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  section {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  .usuario {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 20px;
+    right: 10px;
+    width: 200px;
+    height: auto;
+  }
+  
+  .usuario > img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .opciones {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 150px;
+    height: auto;
+    max-height: fit-content;
+    border-radius: 10px;
+  }
+  
+  .opciones > div {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .opciones > div > button {
+    width: 100%;
+    height: 30px;
+    color: black;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition-duration: 1s;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .opciones > div :last-child {
+    border-radius: 0px 0px 10px 10px;
+  }
+  
+  .opciones > div > button:hover {
+    background-color: rgb(148, 148, 148);
+  }
+  
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+    height: 100%;
+    border-collapse: collapse;
+    align-items: center;
+    min-width: 520px;
+    min-height: 520px;
+    overflow-x: auto;
+  }
+  
+  .contenedor_tabla {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+  }
+  .contenedor_tabla > h2 {
+    text-transform: capitalize;
+  }
+  
+  thead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    position: relative;
+    bottom: 1px;
+  }
+  
+  thead > tr :last-child {
+    border: none;
+    width: 180px;
+  }
+  
+  thead > tr {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  thead > tr > td {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+    padding-right: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  
+  tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    position: relative;
+  }
+  
+  tbody > tr :last-child {
+    display: flex;
+    border: none;
+    justify-content: flex-start;
+    padding-left: 5px;
+    width: 150px;
+    padding-right: 5px;
+  }
+  
+  tbody > tr {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+  }
+  
+  tbody > tr > td {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  
+  tbody > tr > td > img {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .contenedor-tabla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*parte mobil*/
+  @media screen and (max-width: 820px) {
+    nav {
+      min-width: 220px;
+    }
+  
+    main {
+      height: 100%;
+    }
+  
+    .usuario {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      width: 50px;
+    }
+  
+    .usuario > img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  
+    .opciones {
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 50px;
+      right: 0px;
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+  
+    table {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      border-collapse: collapse;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 250px;
+    }
+  
+    thead > tr {
+      padding-top: 5px;
+      font-size: smaller;
+      font-weight: 100;
+    }
+  
+    tbody > tr {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      max-height: 100px;
+      min-height: 60px;
+      max-height: 100px;
+      text-align: center;
+    }
+    #index {
+      display: none;
+      visibility: hidden;
+    }
+  }
