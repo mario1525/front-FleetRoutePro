@@ -1,1 +1,54 @@
-<p>home works!</p>
+<main>
+    <div class="salida">
+      <div class="contenedor-x " (click)="cerrarsession()">
+        <div class="contenedor-x">
+          <div class="linea linea1"></div>
+          <div class="linea linea2"></div>
+        </div>
+      </div>
+    </div>
+    <aside>
+      <div class="contenedor">        
+        <div>
+          <div class="contenedor-proceso">
+            <div class="contenedor-icono">
+              <img src="assets/img/logo.jpg" alt="Icono" style="width: 600px; height: 600px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <section>
+      <form [formGroup]="myformulario" (ngSubmit)="submitFormulario()" class="formulario">
+        <div>
+            <div>
+                <label for="RouteId">ruta</label>
+              </div>
+            <select formControlName="RutaSeleccionada">
+                <option *ngFor="let ruta of rutas$ | async" [value]="ruta.ID">{{ ruta.Descriptionn }}</option>
+              </select> 
+        </div>                 
+        <div>              
+          <div>
+            <label for="WeekNum">numero de semana</label>
+          </div>
+          <input  formControlName="WeekNum" type="text" name="" id="">
+        </div>
+        <div>
+          <div>
+            <label for="Fromm">desde</label>
+          </div>
+          <input  formControlName="Fromm" type="text" name="" id="">
+        </div>  
+        <div>
+            <div>
+              <label for="Too">hasta</label>
+            </div>
+            <input  formControlName="Too" type="text" name="" id="">
+        </div>           
+        <div class="buttom-contenedor">
+          <button >Crear</button>
+        </div>
+      </form>
+    </section>    
+  </main>

@@ -12,7 +12,7 @@ import { VehiclesComponent } from './Modules/vehicles/vehicles.component';
 import { RouteComponent } from './Modules/route/route.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'client/home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'user/home', component: UserHomeComponent },

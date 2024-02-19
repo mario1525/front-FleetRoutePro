@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Schedule } from 'src/Types/schedules';
 import { Router } from '@angular/router';
-import { SchedulesService } from '../../shared/services/rutes.services';
+import { SchedulesService } from '../../shared/services/schedules.services';
 import { AutenticacionService } from 'src/app/shared/services/auhtentication';
 
 @Component({
