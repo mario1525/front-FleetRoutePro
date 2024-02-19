@@ -13,7 +13,7 @@ import { AutenticacionService } from 'src/app/shared/services/auhtentication';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   opciones = false
   datos_Schedules: Schedule[] = [];

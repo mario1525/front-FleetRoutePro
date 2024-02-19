@@ -165,6 +165,19 @@ section {
     height: 150px;
     object-fit: fill;
   }
-  
+  .buttom-contenedor > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 40px;
+    background-color: rgba(128, 127, 127, 0.473);
+    color: rgb(255,255,255);
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
+    font-size: x-large;
+    padding: 30px;
+    cursor: pointer;
+  }
 
 }

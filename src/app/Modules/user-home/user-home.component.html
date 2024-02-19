@@ -1,1 +1,84 @@
-<p>user-home works!</p>
+<main>
+    <div class="salida">
+      <div class="contenedor-x " (click)="cerrarsession()">
+        <div class="contenedor-x">
+          <div class="linea linea1"></div>
+          <div class="linea linea2"></div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div>
+        <!-- Formulario para Driver -->
+<form [formGroup]="myformularioDriver" class="detalles">
+    <div class="detalle_1">
+      <label>identificacion</label>      
+      <label>Nombre del conductor</label>
+      <input formControlName="First_Name" type="text" [value]="myformularioDriver.value.First_Name">
+      <label>Apellido del conductor</label>
+      <input formControlName="Last_Name" type="text" [value]="myformularioDriver.value.Last_Name">
+      <label>SSN</label>
+      <input formControlName="Ssn" type="text" [value]="myformularioDriver.value.Ssn">
+      <label>Fecha de nacimiento</label>
+      <input formControlName="Dob" type="date" [value]="myformularioDriver.value.Dob">
+    </div> 
+    <div class="detalle_2">
+        <label>Dirección</label>
+        <input formControlName="Addresss" type="text" [value]="myformularioDriver.value.Addresss">
+        
+        <label>Ciudad</label>
+        <input formControlName="City" type="text" [value]="myformularioDriver.value.City">        
+        <label>Zip</label>
+        <input formControlName="Zip" type="text" [value]="myformularioDriver.value.Zip">        
+        <label>Teléfono</label>
+        <input formControlName="Phone" type="number" [value]="myformularioDriver.value.Phone">        
+        <label>Activo</label>
+        <input formControlName="Active" type="checkbox" [checked]="myformularioDriver.value.Active">
+        
+      </div>
+     
+    <!-- Formulario para Vehicles -->
+  </form>
+        <form [formGroup]="myformularioVehicle" class="detalles">
+            <div class="detalle_1">
+              <label>identificacion</label>
+              <input formControlName="ID" type="text" [value]="myformularioVehicle.value.ID">
+              <label>Descripción del vehículo</label>
+              <input formControlName="Descriptionn" type="text" [value]="myformularioVehicle.value.Descriptionn">
+              <label>Año</label>
+              <input formControlName="Yearr" type="number" [value]="myformularioVehicle.value.Yearr">
+              <label>Marca</label>
+              <input formControlName="Make" type="text" [value]="myformularioVehicle.value.Make">
+            </div>
+            <div class="detalle_2">
+              <label>Capacidad</label>
+              <input formControlName="Capacity" type="number" [value]="myformularioVehicle.value.Capacity">
+              <label>Activo</label>
+              <input formControlName="Active" type="checkbox" [checked]="myformularioVehicle.value.Active">
+            </div>
+          </form>          
+          <!-- Formulario para Rute -->
+          <form [formGroup]="myformularioRute" class="detalles">
+            <div class="detalle_1">
+              <label>identificacion</label>
+              <input formControlName="ID" type="text" [value]="myformularioRute.value.ID">
+              <label>Descripción de la ruta</label>
+              <input formControlName="Descriptionn" type="text" [value]="myformularioRute.value.Descriptionn">
+              <label>ID del conductor</label>
+              <input formControlName="DriverId" type="text" [value]="myformularioRute.value.DriverId">
+              <label>ID del vehículo</label>
+              <input formControlName="VehicleId" type="text" [value]="myformularioRute.value.VehicleId">
+            </div>
+            <div class="detalle_2">
+              <label>Activo</label>
+              <input formControlName="Active" type="checkbox" [checked]="myformularioRute.value.Active">
+            </div>
+          </form>          
+        </div>      
+    </section>
+    <section id="aside">
+      <div id="logo">
+        <img src="assets/img/logo.jpg" alt="logo" />
+      </div>
+    </section>
+  </main>
